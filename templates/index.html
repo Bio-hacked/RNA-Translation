@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,8 +8,36 @@
     <title>RNA Translation</title>
     <link rel="stylesheet" href="static/style.css">
 </head>
+
+
+
 <body>
     <h1>Hello World, this is Bio-Hacked</h1>
+    <div>
+        <p>
+        Please enter your RNA Sequence here.
+        </p>
+        <form method='POST' action='/'> 
+            RNA Sequence: <br>
+            <input type='text' name='RNA_sequence'> 
+            <button type='submit' value='submit'>
+                submit
+
+            </button>
+
+
+        </form>
+    </div>
+
+    
+    <div>
+        {% if RNA_sequence %}
+        <p>
+            {{ Amino_string }}
+        </p>
+        {% endif %}
+    </div>
+
     
 </body>
 </html>
